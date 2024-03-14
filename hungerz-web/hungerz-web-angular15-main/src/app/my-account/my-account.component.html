@@ -1,0 +1,147 @@
+<div class="body_wrapper">
+    <!-- Banner section start -->
+    <div class="pageTitle">
+        <div class="container position-relative">
+            <h1 class="text-center py-4 text-md-start">
+                {{'my_account' | translate}}
+            </h1>
+        </div>
+    </div>
+    <section class="themePadding pt-0">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-12 col-md-3 col-xl-2">
+                    <ul class="nav row g-0 d-flex">
+                        <li class="nav-item col-6 col-md-12 mb-md-2" [ngClass]="toggleClass1 ? 'active' : '' " (click)="my_profile()">
+                            <a class="nav-link text-md-start text-start">
+                                {{'my_profile' | translate}}
+                            </a>
+                        </li>
+                        <li class="nav-item col-6 col-md-12 mb-md-2" [ngClass]="toggleClass2 ? 'active' : '' " (click)="my_address()">
+                            <a class="nav-link text-md-start text-start">
+                                {{'my_address' | translate}}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-9 col-lg-9 col-xl-10">
+                    <div class="card pt-3 border-0 col-12 mx-auto" *ngIf="showSection == 1">
+                        <form class="col-12 col-md-11 mx-auto px-3">
+                            <div class="row g-0 align-items-center pb-3 pb-lg-3">
+                                <div class="col-12 col-md-10 pb-4 pb-md-0">
+                                    <h2 class="m-0 mb-lg-2 animate__animated animate__fadeInUp wow">
+                                        {{'my_profile' | translate}}
+                                    </h2>
+                                </div>
+
+                                <div class="col-12 col-md-2 text-md-end">
+                                    <div class="img_container">
+                                        <div class="img_box center_img">
+                                            <img src="assets/images/profile.png" class="crop_img">
+                                        </div>
+                                        <i class="zmdi zmdi-camera"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="from_inner">
+                                <div class="form-group animate__animated animate__fadeInUp wow">
+                                    <label>{{'full_name' | translate}}</label>
+                                    <div class="form-group-inner d-flex align-items-center">
+                                        <input type="name" class="form-control" value="Samtha Smith" placeholder="{{'enter_full_name' | translate}}">
+                                    </div>
+                                </div>
+
+                                <div class="form-group animate__animated animate__fadeInUp wow">
+                                    <label>{{'email_address' | translate}}</label>
+                                    <div class="form-group-inner d-flex align-items-center">
+                                        <input type="email" class="form-control" value="samthasmith@email.com" placeholder="{{'enter_email_address' | translate}}">
+                                    </div>
+                                </div>
+
+                                <div class="form-group animate__animated animate__fadeInUp wow">
+                                    <label>{{'phone_number' | translate}}</label>
+                                    <div class="form-group-inner d-flex align-items-center">
+                                        <input type="tel" class="form-control" value="+1 987 654 3210" placeholder="{{'enter_phone_number' | translate}}">
+                                    </div>
+                                </div>
+                                <div class="d-flex mt-5  animate__animated animate__fadeInUp wow">
+                                    <button class="btn rounded-pill  end">
+                                        {{'save' | translate}}
+                                    </button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="card pt-3 border-0 col-12 mx-auto" *ngIf="showSection == 2">
+                        <form class="col-12 col-md-11 mx-auto px-3">
+                            <div class="row g-0 align-items-center pb-3 pb-lg-3" style="min-height: 91px;">
+                                <div class="col-12 col-md-6 pb-4 pb-md-0 d">
+                                    <h2 class="m-0 mb-lg-2 animate__animated animate__fadeInUp wow">
+                                        {{'my_address' | translate}}
+                                    </h2>
+                                </div>
+
+                                <div class="col-12 col-md-6 pb-4 pb-md-0 text-md-end">
+                                    <button class="btn rounded-pill animate__animated animate__fadeInUp wow" style="display: inline-block;" (click)="addNewAddress()">
+                                        {{'add_address' | translate}}
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="saved_address col-12 px-0 col-lg-11">
+                                <div class="from_inner">
+                                    <div class="form-group animate__animated animate__fadeInUp wow d-flex align-items-start">
+                                        <div class="text-box w-100">
+                                            <h3>Home</h3>
+                                            <p>656 East Depot Lane Bronx, New York 10460</p>
+                                        </div>
+                                        <i class="zmdi zmdi-edit end" type="button" (click)="addNewAddress()"></i>
+                                    </div>
+
+                                    <div class="form-group animate__animated animate__fadeInUp wow d-flex align-items-start">
+                                        <div class="text-box w-100">
+                                            <h3>Work</h3>
+                                            <p>9922 West Linda Rd. Rochester, New York 14609</p>
+                                        </div>
+                                        <i class="zmdi zmdi-edit end" type="button" (click)="addNewAddress()"></i>
+                                    </div>
+
+                                    <div class="form-group animate__animated animate__fadeInUp wow d-flex align-items-start">
+                                        <div class="text-box w-100">
+                                            <h3>Other</h3>
+                                            <p>8659 New Dr. Jamestown, New York 14701</p>
+                                        </div>
+                                        <i class="zmdi zmdi-edit end" type="button" (click)="addNewAddress()"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- add new address -->
+    <!-- <div class="modal fade" id="addNewAddress" tabindex="-1" aria-labelledby="addNewAddressLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <app-add-address></app-add-address>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- Download app section start -->
+    <app-download-our-app> </app-download-our-app>
+    <!-- Download app section end -->
+
+    <!--Footer start -->
+    <app-footer></app-footer>
+    <!--Footer end -->
+</div>

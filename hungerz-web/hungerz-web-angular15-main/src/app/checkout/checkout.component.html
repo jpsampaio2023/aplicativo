@@ -1,0 +1,155 @@
+<div class="body_wrapper">
+    <section class="themePadding pt-3 pb-0">
+        <div class="container">
+            <form>
+                <div class="row g-2">
+                    <div class="col-12 col-lg-6">
+                        <div class="card deliver_address rounded-0 border-0 py-4 px-lg-3 p">
+                            <div class="card_header col-11 col-md-10 mx-auto px-0">
+                                <h2>{{'checkout' | translate}}</h2>
+                            </div>
+                            <div class="card_content col-11 col-md-10 mx-auto px-0">
+                                <h2 class="d-flex">{{'deliver_address' | translate}}
+                                    <!-- <span class="end" (click)="">{{'change' | translate}}</span> -->
+                                </h2>
+                                <div class="form-group animate__animated animate__fadeInUp wow">
+                                    <div class="form-group-inner d-flex px-0 align-items-start">
+                                        <i class="zmdi zmdi-home"></i>
+                                        <div class="text-box w-100">
+                                            <h3>Home</h3>
+                                            <p>Hcc, Lintone Park, Rodikson Way, Hemilton, USA.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card rounded-0 border-0 py-4 px-lg-3 pb-5">
+                            <div class="card_content col-11 col-md-10 mx-auto px-0">
+                                <h2>{{'payment_method' | translate}} </h2>
+                                <div class="form-group animate__animated animate__fadeInUp wow">
+                                    <div class="form-group-inner px-0">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="credit_card" value="credit_card" name="payment_method" checked>
+                                            <label class="form-check-label" for="credit_card">
+                                            Credit Card
+                                        </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group animate__animated animate__fadeInUp wow">
+                                    <div class="form-group-inner px-0">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="debit_card" value="debit_card" name="payment_method">
+                                            <label class="form-check-label" for="debit_card">
+                                            Debit Card
+                                        </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group animate__animated animate__fadeInUp wow">
+                                    <div class="form-group-inner px-0">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="payPal" value="payPal" name="payment_method">
+                                            <label class="form-check-label" for="payPal">
+                                            PayPal
+                                        </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group animate__animated animate__fadeInUp wow">
+                                    <div class="form-group-inner px-0">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="cod" value="cod" name="payment_method">
+                                            <label class="form-check-label" for="cod">
+                                            Cash on Delivery
+                                        </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex animate__animated animate__fadeInUp wow">
+                                    <button class="btn rounded-pill mt-3 end" (click)="orderPlaced()">
+                                        {{'confirm' | translate}}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="card item_summery rounded-0 border-0 py-4 px-lg-3 pb-5">
+                            <div class="card_header col-11 col-md-10 mx-auto px-0">
+                                <h2>{{'summery' | translate}}</h2>
+                            </div>
+                            <div class="card_content col-11 col-md-10 mx-auto px-0">
+                                <ul class="list-group">
+                                    <li class="list-group-item animate__animated animate__fadeInUp wow">
+                                        <div class="text_box">
+                                            <h2>Veg Sandwich (1)</h2>
+                                            <h3>Extra Cheese</h3>
+                                        </div>
+                                        <h5 class="end">$8.00</h5>
+                                    </li>
+
+                                    <li class="list-group-item animate__animated animate__fadeInUp wow">
+                                        <div class="text_box">
+                                            <h2>Fride Chiken (1)</h2>
+                                            <!-- <h3>Calvis Veggies</h3> -->
+                                        </div>
+                                        <h5 class="end">$7.00</h5>
+                                    </li>
+
+                                    <li class="list-group-item animate__animated animate__fadeInUp wow">
+                                        <div class="text_box">
+                                            <h2>Watermelon Juice (1)</h2>
+                                            <!-- <h3>Philinopis</h3> -->
+                                        </div>
+                                        <h5 class="end">$4.50</h5>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card amount_info rounded-0 border-0 py-4 px-lg-3 pb-4">
+                            <div class="card_content col-11 col-md-10 mx-auto px-0">
+                                <h3 class="d-flex animate__animated animate__fadeInUp wow">
+                                    {{'cart_total' | translate}}
+                                    <span class="end">$19.00</span>
+                                </h3>
+                                <h3 class="d-flex animate__animated animate__fadeInUp wow">
+                                    {{'delivery_fee' | translate}}
+                                    <span class="end">$1.50</span>
+                                </h3>
+                                <h3 class="d-flex animate__animated animate__fadeInUp wow">
+                                    {{'promo_code' | translate}}
+                                    <span class="end">- $1.50</span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="card amount_info  amount_to_pay rounded-0 border-0 py-4 px-lg-3 pb-4">
+                            <div class="card_content col-11 col-md-10 mx-auto px-0 animate__animated animate__fadeInUp wow">
+                                <h3 class="d-flex" style="color: var(--primary); font-size: .9rem;">
+                                    {{'amount_to_pay' | translate}}
+                                    <span class="end fw-semibold">$19.00</span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Download app section start -->
+    <app-download-our-app> </app-download-our-app>
+    <!-- Download app section end -->
+
+    <!--Footer start -->
+    <app-footer></app-footer>
+    <!--Footer end -->
+</div>

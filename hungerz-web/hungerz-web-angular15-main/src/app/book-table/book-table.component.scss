@@ -1,0 +1,145 @@
+.offcanvas-header {
+    display: block !important;
+    .media {
+        padding: 0 0 20px;
+        border-radius: 0;
+        cursor: unset;
+        transform: unset;
+        box-shadow: none !important;
+        .img_box {
+            min-width: 55px;
+            height: 55px;
+        }
+        .media-body {
+            width: 100%;
+            h2 {
+                span {
+                    color: #7dca24;
+                    font-weight: 600;
+                    font-size: 0.8rem;
+                    min-width: fit-content;
+                    i {
+                        font-size: 0.85rem;
+                        min-width: 17px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.offcanvas-body {
+    background: var(--bg-white);
+    max-height: calc(100vh - 159px - 65px);
+    min-height: calc(100vh - 159px - 65px);
+    padding-top: 20px;
+    form {
+        h2 {
+            margin: 0;
+            padding: 0 20px 20px;
+            font-size: 1.1rem;
+            color: var(--text-black);
+        }
+        .card {
+            background: var(--bg-white);
+            border-radius: 0;
+            width: 100%;
+            margin: 0;
+            padding-bottom: 20px;
+            .from_inner {
+                display: block;
+                width: 100%;
+                overflow: hidden;
+                overflow-x: auto;
+                white-space: nowrap;
+                padding-bottom: 20px;
+                &::-webkit-scrollbar {
+                    height: 5px;
+                }
+                &::-webkit-scrollbar-track {
+                    background-color: var(--bg-color);
+                    border-radius: 50px;
+                    height: 5px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: var(--text-light);
+                    border-radius: 50px;
+                    height: 5px;
+                }
+                .form-group {
+                    display: inline-block;
+                    margin: 0 5px;
+                    .form-check {
+                        min-width: 93px;
+                        display: flex;
+                        align-items: center;
+                        min-height: 45px;
+                        background: var(--bg-color);
+                        border-radius: 9px;
+                        padding: 10px;
+                        .form-check-label {
+                            text-align: center;
+                            color: var(--text-black) !important;
+                        }
+                        .form-check-input {
+                            width: 100%;
+                            height: 100%;
+                            left: 0;
+                            top: 0 !important;
+                            max-width: fit-content !important;
+                            max-height: fit-content !important;
+                            display: block;
+                            position: absolute;
+                            min-width: 100% !important;
+                            border-radius: 8px !important;
+                            border-color: transparent !important;
+                            background: none !important;
+                            &::after {
+                                display: none !important;
+                            }
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                width: 0;
+                                height: 0;
+                                margin: auto;
+                                background: var(--primary);
+                                transition: all .3s;
+                                opacity: .2;
+                            }
+                            &:checked {
+                                border-color: var(--primary) !important;
+                                &::before {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                    &:first-child {
+                        margin-left: 20px;
+                    }
+                    &:last-child {
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.offcanvas-footer {
+    button.btn {
+        border-radius: 0;
+        width: 100%;
+        height: 65px !important;
+        letter-spacing: 0;
+        text-transform: unset;
+        font-weight: 400;
+        font-size: .9rem;
+    }
+}

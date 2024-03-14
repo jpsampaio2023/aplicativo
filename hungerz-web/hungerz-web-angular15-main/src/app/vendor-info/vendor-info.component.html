@@ -1,0 +1,778 @@
+<div class="body_wrapper">
+    <!-- Banner section start -->
+    <div class="pageTitle">
+        <div class="container px-3 px-md-0">
+            <div class="row g-0 align-items-center  col-12 col-md-12 col-lg-12 col-xl-12 px-0">
+                <div class="img_box center_img mb-3 mb-md-0">
+                    <img src="assets/images/vendor/6.png" class="crop_img">
+                </div>
+                <div class="col-12 col-md">
+                    <h2>Food Junction</h2>
+                    <h3>Fast Food, Italian, Chinese</h3>
+                    <h5 class="d-block d-md-flex align-items-center col-xl-8 px-0">
+                        <i class="zmdi zmdi-pin"></i> 2.4 km | City Food Park
+
+                        <strong class="end pt-2 pt-md-0">
+                            <i class="zmdi zmdi-star"></i>4.2   
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span type="button" data-bs-toggle="offcanvas" data-bs-target="#reviews" aria-controls="my-cart">148 {{'reviews' | translate}}
+                                <i class="zmdi zmdi-chevron-right text-end"></i> &nbsp;&nbsp;
+                            </span>
+                        </strong>
+                    </h5>
+
+                    <form role="search">
+                        <div class="row g-3 px-0">
+                            <div class="form-group search_box mb-0 col-12 col-xl-6">
+                                <div class="form-group-inner d-flex align-items-center mb-0">
+                                    <i class="zmdi zmdi-search"></i>
+                                    <input type="search" class="form-control" placeholder="{{'search_for_dishes' | translate}}">
+                                </div>
+                            </div>
+
+                            <div class="form-group search_box favorite mb-0 col-6 col-xl-2" [ngClass]="toggleClass ? 'active' : '' " (click)="saveToFavorite()">
+                                <div class="form-group-inner d-flex align-items-center mb-0">
+                                    <i class="zmdi zmdi-favorite-outline text-center text-lg-start mx-auto"></i>
+                                    <i class="zmdi zmdi-favorite text-center text-lg-start mx-auto"></i>
+                                    <input type="search" class="form-control d-none d-lg-block" value="{{'favorite' | translate}}" readonly>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl d-flex">
+                                <div class="form-group bookAtable mb-0 end" type="button" data-bs-toggle="offcanvas" data-bs-target="#book_a_table" aria-controls="book_a_table">
+                                    <div class="form-group-inner d-flex align-items-center mb-0">
+                                        <img src="assets/images/icons/ic_dine_in.png">&nbsp;&nbsp;
+                                        <h3>{{'book_a_table' | translate}}</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="page_offcanvas offcanvas offcanvas-end my-cart" tabindex="-1" id="reviews" aria-labelledby="reviews">
+        <app-reviews></app-reviews>
+    </div>
+
+    <div class="page_offcanvas offcanvas offcanvas-end my-cart" tabindex="-1" id="book_a_table" aria-labelledby="book_a_table">
+        <app-book-table></app-book-table>
+    </div>
+
+
+    <section class="themePadding pt-2" style="padding-top: 80px;">
+        <div class="container  px-md-0">
+            <div class="row g-2">
+                <div class="col-12 col-md-3 col-xl-2">
+                    <ul class="nav row g-2 d-flex">
+                        <li class="nav-item col-6 col-md-12" [ngClass]="toggleClass1 ? 'active' : '' " (click)="sectionShowButton(1)">
+                            <a class="nav-link text-center text-md-end">
+                                <span> Fast Food</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item col-6 col-md-12" [ngClass]="toggleClass2 ? 'active' : '' " (click)="sectionShowButton(2)">
+                            <a class="nav-link text-center text-md-end">
+                                <span>See Food</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item col-6 col-md-12" [ngClass]="toggleClass3 ? 'active' : '' " (click)="sectionShowButton(3)">
+                            <a class="nav-link text-center text-md-end">
+                                <span>Chinese </span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item col-6 col-md-12" [ngClass]="toggleClass4 ? 'active' : '' " (click)="sectionShowButton(4)">
+                            <a class="nav-link text-center text-md-end">
+                                <span> Dessert </span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item col-6 col-md-12" [ngClass]="toggleClass5 ? 'active' : '' " (click)="sectionShowButton(5)">
+                            <a class="nav-link text-center text-md-end">
+                                <span>Pizza </span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item col-6 col-md-12" [ngClass]="toggleClass6 ? 'active' : '' " (click)="sectionShowButton(6)">
+                            <a class="nav-link text-center text-md-end">
+                                <span>Beverages </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- <items section start -->
+                <div class="col-12 col-md-9 col-lg-6 col-xl-6">
+                    <div class="card  border-0 col-12 mx-auto" *ngIf="showSection == 1">
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/1.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Sandwich</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $5.00 &nbsp;&nbsp;
+                                    <strong>{{'customise' | translate}}</strong>
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/2.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Chinese Sandwich</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $3.50 &nbsp;&nbsp;
+                                    <!-- <strong>{{'customise' | translate}}</strong> -->
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/3.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Frankie</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $4.00 &nbsp;&nbsp;
+                                    <strong>{{'customise' | translate}}</strong>
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/4.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Burger</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $7.00 &nbsp;&nbsp;
+                                    <!-- <strong>{{'customise' | translate}}</strong> -->
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/5.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Fride Chiken</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_nonveg.png">&nbsp;&nbsp; $4.50 &nbsp;&nbsp;
+                                    <!-- <strong>{{'customise' | translate}}</strong> -->
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/6.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Chiken Rool</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_nonveg.png">&nbsp;&nbsp; $3.50 &nbsp;&nbsp;
+                                    <strong>{{'customise' | translate}}</strong>
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card  border-0 col-12 mx-auto" *ngIf="showSection == 2">
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/3.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Frankie</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $4.00 &nbsp;&nbsp;
+                                    <strong>{{'customise' | translate}}</strong>
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/4.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Burger</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $7.00 &nbsp;&nbsp;
+                                    <!-- <strong>{{'customise' | translate}}</strong> -->
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/1.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Sandwich</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $5.00 &nbsp;&nbsp;
+                                    <strong>{{'customise' | translate}}</strong>
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/2.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Chinese Sandwich</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $3.50 &nbsp;&nbsp;
+                                    <!-- <strong>{{'customise' | translate}}</strong> -->
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/5.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Fride Chiken</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_nonveg.png">&nbsp;&nbsp; $4.50 &nbsp;&nbsp;
+                                    <!-- <strong>{{'customise' | translate}}</strong> -->
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/6.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Chiken Rool</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_nonveg.png">&nbsp;&nbsp; $3.50 &nbsp;&nbsp;
+                                    <strong>{{'customise' | translate}}</strong>
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card  border-0 col-12 mx-auto" *ngIf="showSection == 3">
+
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/3.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Frankie</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $4.00 &nbsp;&nbsp;
+                                    <strong>{{'customise' | translate}}</strong>
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/1.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Sandwich</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $5.00 &nbsp;&nbsp;
+                                    <strong>{{'customise' | translate}}</strong>
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/2.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Chinese Sandwich</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $3.50 &nbsp;&nbsp;
+                                    <!-- <strong>{{'customise' | translate}}</strong> -->
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/4.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Burger</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $7.00 &nbsp;&nbsp;
+                                    <!-- <strong>{{'customise' | translate}}</strong> -->
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/5.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Fride Chiken</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_nonveg.png">&nbsp;&nbsp; $4.50 &nbsp;&nbsp;
+                                    <!-- <strong>{{'customise' | translate}}</strong> -->
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/6.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Chiken Rool</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_nonveg.png">&nbsp;&nbsp; $3.50 &nbsp;&nbsp;
+                                    <strong>{{'customise' | translate}}</strong>
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card  border-0 col-12 mx-auto" *ngIf="showSection == 4">
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/3.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Frankie</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $4.00 &nbsp;&nbsp;
+                                    <strong>{{'customise' | translate}}</strong>
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/4.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Burger</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $7.00 &nbsp;&nbsp;
+                                    <!-- <strong>{{'customise' | translate}}</strong> -->
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/1.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Sandwich</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $5.00 &nbsp;&nbsp;
+                                    <strong>{{'customise' | translate}}</strong>
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/2.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Chinese Sandwich</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $3.50 &nbsp;&nbsp;
+                                    <!-- <strong>{{'customise' | translate}}</strong> -->
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/5.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Fride Chiken</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_nonveg.png">&nbsp;&nbsp; $4.50 &nbsp;&nbsp;
+                                    <!-- <strong>{{'customise' | translate}}</strong> -->
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/6.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Chiken Rool</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_nonveg.png">&nbsp;&nbsp; $3.50 &nbsp;&nbsp;
+                                    <strong>{{'customise' | translate}}</strong>
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card  border-0 col-12 mx-auto" *ngIf="showSection == 5">
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/3.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Frankie</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $4.00 &nbsp;&nbsp;
+                                    <strong>{{'customise' | translate}}</strong>
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/4.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Burger</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $7.00 &nbsp;&nbsp;
+                                    <!-- <strong>{{'customise' | translate}}</strong> -->
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/1.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Sandwich</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $5.00 &nbsp;&nbsp;
+                                    <strong>{{'customise' | translate}}</strong>
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/2.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Chinese Sandwich</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $3.50 &nbsp;&nbsp;
+                                    <!-- <strong>{{'customise' | translate}}</strong> -->
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/5.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Fride Chiken</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_nonveg.png">&nbsp;&nbsp; $4.50 &nbsp;&nbsp;
+                                    <!-- <strong>{{'customise' | translate}}</strong> -->
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/6.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Chiken Rool</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_nonveg.png">&nbsp;&nbsp; $3.50 &nbsp;&nbsp;
+                                    <strong>{{'customise' | translate}}</strong>
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card  border-0 col-12 mx-auto" *ngIf="showSection == 6">
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/1.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Sandwich</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $5.00 &nbsp;&nbsp;
+                                    <strong>{{'customise' | translate}}</strong>
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/2.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Chinese Sandwich</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $3.50 &nbsp;&nbsp;
+                                    <!-- <strong>{{'customise' | translate}}</strong> -->
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/3.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Frankie</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $4.00 &nbsp;&nbsp;
+                                    <strong>{{'customise' | translate}}</strong>
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/4.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Veg Burger</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_veg.png">&nbsp;&nbsp; $7.00 &nbsp;&nbsp;
+                                    <!-- <strong>{{'customise' | translate}}</strong> -->
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/5.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Fride Chiken</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_nonveg.png">&nbsp;&nbsp; $4.50 &nbsp;&nbsp;
+                                    <!-- <strong>{{'customise' | translate}}</strong> -->
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="media d-flex align-items-center animate__animated animate__fadeInUp wow">
+                            <div class="img_box center_img">
+                                <img src="assets/images/items/6.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Chiken Rool</h2>
+                                <h3 class="d-flex">
+                                    <img src="assets/images/icons/food_nonveg.png">&nbsp;&nbsp; $3.50 &nbsp;&nbsp;
+                                    <strong>{{'customise' | translate}}</strong>
+
+                                    <span class="end">{{'add' | translate}}</span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <items section end -->
+
+                <!-- <items in cart section start -->
+                <div class="col-12 col-md-12 col-lg-6 col-xl-4 cartSetcion">
+                    <div class="card border-0 col-12 mx-auto">
+                        <h5>{{'items_in_cart' | translate}}</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item align-items-start  animate__animated animate__fadeInUp wow">
+                                <img src="assets/images/icons/food_veg.png">
+                                <div class="text_box">
+                                    <div class="d-flex align-items-center">
+                                        <h2>Veg Sandwich</h2>
+                                        <h4 class="end">
+                                            <span>-</span>
+                                            <strong>1</strong>
+                                            <span>+</span>
+                                        </h4>
+                                        <h6 class="text-end">$5.00</h6>
+                                    </div>
+                                    <h3 class="d-flex align-items-center">
+                                        Extra Cheese
+                                        <span class="end">$3.00</span>
+                                    </h3>
+                                </div>
+                            </li>
+
+                            <li class="list-group-item align-items-start  animate__animated animate__fadeInUp wow">
+                                <img src="assets/images/icons/food_nonveg.png">
+                                <div class="text_box">
+                                    <div class="d-flex align-items-center">
+                                        <h2>Fride Chiken</h2>
+                                        <h4 class="end">
+                                            <span>-</span>
+                                            <strong>1</strong>
+                                            <span>+</span>
+                                        </h4>
+                                        <h6 class="text-end">$7.00</h6>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="list-group-item align-items-start  animate__animated animate__fadeInUp wow">
+                                <img src="assets/images/icons/food_veg.png">
+                                <div class="text_box">
+                                    <div class="d-flex align-items-center">
+                                        <h2>Watermelon Juice</h2>
+                                        <h4 class="end">
+                                            <span>-</span>
+                                            <strong>1</strong>
+                                            <span>+</span>
+                                        </h4>
+                                        <h6 class="text-end">$4.50</h6>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <form>
+                        <div class="from_inner">
+                            <div class="form-group">
+                                <div class="form-group-inner d-flex align-items-center">
+                                    <i class="zmdi zmdi-label-heart"></i>
+                                    <input type="text" class="form-control" placeholder="{{'add_promo_code' | translate}}">
+                                    <h3 class="end"> {{'apply' | translate}}</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="card border-0 payment_info col-12 mx-auto">
+                        <h5>{{'payment_info' | translate}}</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div class="text_box">
+                                    <h3 class="d-flex">{{'sub_total' | translate}}
+                                        <span class="end">$19.00</span>
+                                    </h3>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="text_box">
+                                    <h3 class="d-flex">{{'service_fee' | translate}}
+                                        <span class="end">$1.50</span>
+                                    </h3>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="text_box">
+                                    <h2 class="d-flex">{{'amount_to_pay' | translate}}
+                                        <span class="end">$21.00</span>
+                                    </h2>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="btn" (click)="checkout()">
+                        {{'pay' | translate}} $21.00
+                    </button>
+                </div>
+                <!-- <items in cart section end -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Download app section start -->
+    <app-download-our-app> </app-download-our-app>
+    <!-- Download app section end -->
+
+    <!--Footer start -->
+    <app-footer></app-footer>
+    <!--Footer end -->
+</div>

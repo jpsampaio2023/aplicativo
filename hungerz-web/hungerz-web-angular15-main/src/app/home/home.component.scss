@@ -1,0 +1,125 @@
+.banner {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 130px);
+        // background-image: url('../../assets/images/home-banner-bg.png');
+        // background-repeat: repeat;
+        // background-size: cover;
+        display: block !important;
+        background-color: #f1cb46;
+    }
+    h1 {
+        margin: 0;
+        color: var(--text-white);
+        font-weight: 600;
+    }
+    form {
+        .form-group {
+            &.search_box {
+                .form-group-inner {
+                    background: var(--bg-white);
+                    border-radius: 15px;
+                    min-height: 60px;
+                    padding: 0 8px;
+                    button.btn {
+                        width: 45px !important;
+                        min-width: 45px !important;
+                        padding: 0;
+                        height: 45px;
+                        border-radius: 15px;
+                        display: flex;
+                        align-items: center;
+                        background: var(--primary);
+                        min-height: 45px !important;
+                        i {
+                            color: var(--text-white);
+                            text-align: center;
+                            position: relative;
+                            margin: auto;
+                            top: 1px;
+                            font-size: 1.1rem;
+                        }
+                    }
+                    input {
+                        min-height: 42px !important;
+                        line-height: 42px !important;
+                        font-weight: 500;
+                        padding: 0 11px !important;
+                        font-size: 0.9rem !important;
+                        &::placeholder {
+                            color: var(--text-light2) !important;
+                            font-weight: 400;
+                        }
+                        &:-ms-input-placeholder {
+                            color: var(--text-light2) !important;
+                            font-weight: 400;
+                        }
+                        &::-ms-input-placeholder {
+                            color: var(--text-light2) !important;
+                            font-weight: 400;
+                        }
+                        &::-webkit-outer-spin-button,
+                        &::-webkit-inner-spin-button {
+                            color: var(--text-light2) !important;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .category {
+        position: relative;
+        z-index: 99;
+        .container {
+            .category-row {
+                background: var(--bg-white);
+                border-radius: 13px;
+                box-shadow: 0 0px 18px 2px rgb(0 0 0 / 6%);
+                .col-6 {
+                    cursor: pointer;
+                    transition: all .4s;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    width: 50px;
+                    margin-bottom: 20px;
+                }
+                h3 {
+                    margin: 0;
+                    color: var(--text-black);
+                    text-transform: uppercase;
+                    font-size: .84rem;
+                    letter-spacing: 0;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+        h3 {
+            margin: 0;
+            a {
+                color: var(--text-black);
+                text-decoration: none;
+                font-size: 0.9rem;
+                font-weight: 500;
+                padding: 18px 0;
+                width: fit-content;
+                margin: 0 auto;
+                i {
+                    font-size: 1.35rem;
+                    min-width: 24px;
+                }
+            }
+        }
+    }
+}

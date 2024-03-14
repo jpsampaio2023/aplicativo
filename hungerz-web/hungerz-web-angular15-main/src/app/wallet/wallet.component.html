@@ -1,0 +1,185 @@
+<div class="body_wrapper">
+    <section class="itemRow pt-4 themePadding">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-12 col-lg-8 ">
+                    <div class="card available_bal p-4">
+                        <div class="row g-0 align-items-end px-2">
+                            <div class="text_box col-12 col-md-12">
+                                <div class="row align-items-end">
+                                    <div class="col-12 col-md-6 col-lg-8 pt-2 pb-2 pb-md-0 ">
+                                        <h3 class="pb-3">{{'available_balance' | translate}}</h3>
+                                        <h2 class="d-flex pb-0" style="font-size: 2rem; font-weight: 600;">
+                                            $520.50
+                                        </h2>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4 d-flex">
+                                        <button class="btn end" (click)="sendToBank()">
+                                            {{'send_to_bank' | translate}} 
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card p-4">
+                        <ul class="list-group">
+                            <h2 class="pb-4">{{'resend' | translate}}</h2>
+                            <li class="list-group-item">
+                                <h3 class="mb-0 d-flex">
+                                    Food Junction
+                                    <span class="end">
+                                        $80.00
+                                    </span>
+                                </h3>
+                                <h4 class="d-flex">
+                                    30 June 2018, 11:59 am
+                                    <span class="end">
+                                        3 Items | COD
+                                    </span>
+                                </h4>
+                            </li>
+
+                            <li class="list-group-item">
+                                <h3 class="mb-0 d-flex">
+                                    Hunger Spot
+                                    <span class="end">
+                                        $110.00
+                                    </span>
+                                </h3>
+                                <h4 class="d-flex">
+                                    30 June 2018, 10:23 am
+                                    <span class="end">
+                                        4 Items | PayPal
+                                    </span>
+                                </h4>
+                            </li>
+
+                            <li class="list-group-item money_added">
+                                <h3 class="mb-0 d-flex">
+                                    Money Added
+                                    <span class="end">
+                                        + $500.00
+                                    </span>
+                                </h3>
+                                <h4 class="d-flex">
+                                    29 June 2018, 09:12 am
+                                    <span class="end">
+                                         PayPal
+                                    </span>
+                                </h4>
+                            </li>
+
+                            <li class="list-group-item">
+                                <h3 class="mb-0 d-flex">
+                                    Food Junction
+                                    <span class="end">
+                                        $30.00
+                                    </span>
+                                </h3>
+                                <h4 class="d-flex">
+                                    29 June 2018, 11:23 am
+                                    <span class="end">
+                                        3 Items | COD
+                                    </span>
+                                </h4>
+                            </li>
+
+                            <li class="list-group-item">
+                                <h3 class="mb-0 d-flex">
+                                    Hunger Spot
+                                    <span class="end">
+                                        $21.00
+                                    </span>
+                                </h3>
+                                <h4 class="d-flex">
+                                    29 June 2018, 11:23 am
+                                    <span class="end">
+                                        2 Items | COD
+                                    </span>
+                                </h4>
+                            </li>
+
+                            <li class="list-group-item">
+                                <h3 class="mb-0 d-flex">
+
+                                    Food Junction
+                                    <span class="end">
+                                        $35.00
+                                    </span>
+                                </h3>
+                                <h4 class="d-flex">
+                                    24 June 2018, 09:10 am
+                                    <span class="end">
+                                        2 Items | PayPal
+                                    </span>
+                                </h4>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-lg-4">
+                    <div class="book_an_appointment">
+                        <div class="card px-4 py-4">
+                            <h2 class="pb-3 pt-2 ">{{'add_money' | translate}}</h2>
+                            <form>
+                                <h2>{{'enter_amount_to_add' | translate}}</h2>
+                                <div class="from_inner mx-auto">
+                                    <div class="form-group ">
+                                        <div class="form-group-inner d-flex align-items-center">
+                                            <input type="text" class="form-control" placeholder="$500">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <h2 class="pb-4 pt-2 ">{{'add_money_via' | translate}}</h2>
+
+                            <div class="payment_option pt-2">
+                                <div class="option d-flex">
+                                    <div class="icon_box center_img">
+                                        <img src="assets/images/paymnet_options/payment_card.png" class="img-fluid crop_img">
+                                    </div>
+                                    <h3>Cridit Card</h3>
+                                </div>
+                                <div class="option d-flex">
+                                    <div class="icon_box center_img">
+                                        <img src="assets/images/paymnet_options/payment_paypal.png" class="img-fluid crop_img">
+                                    </div>
+                                    <h3>PayPal</h3>
+                                </div>
+                                <div class="option d-flex">
+                                    <div class="icon_box center_img">
+                                        <img src="assets/images/paymnet_options/payment_payu.png" class="img-fluid crop_img">
+                                    </div>
+                                    <h3>PayU Money</h3>
+                                </div>
+                                <div class="option d-flex">
+                                    <div class="icon_box center_img">
+                                        <img src="assets/images/paymnet_options/payment_stripe.png" class="img-fluid crop_img">
+                                    </div>
+                                    <h3>Stripe</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Download app section start -->
+    <app-download-our-app> </app-download-our-app>
+    <!-- Download app section end -->
+
+    <!--Footer start -->
+    <app-footer></app-footer>
+    <!--Footer end -->
+</div>

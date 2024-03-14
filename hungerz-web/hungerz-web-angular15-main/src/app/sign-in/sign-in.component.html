@@ -1,0 +1,163 @@
+<div class="body-inner d-md-flex align-items-center">
+    <div class="bgAndLogo">
+        <div class="row align-items-end w-100 g-0 ">
+            <div class="col-12 col-md-5">
+                <div class="logo mx-auto pt-4 pb-4 mb-5 text-center">
+                    <img src="assets/images/logo.png" class="img-fluid col-8 col-md-10 col-lg-8 col-xl-6 d-block mx-auto">
+                </div>
+
+                <div class="doctor_img d-none d-md-block">
+                    <img src="assets/images/sign_in_banner.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-block d-lg-flex align-items-end col-12 col-lg-10 mx-auto position-relative">
+
+
+        <div class="row align-items-end w-100 g-0 ">
+            <div class="col-12 col-md-5">
+
+            </div>
+
+            <div class="col-12 col-md-7 form_container pb-5 pb-md-0">
+                <div class="card border-0 col-11 col-md-12 col-lg-12 col-xl-10 mx-auto">
+                    <h5 class="d-flex" *ngIf="currDiv == 'login'">
+                        <span class="end" (click)="home()">
+                            {{'skip' | translate}}
+                        </span>
+                    </h5>
+                    <!--              Sign-in form start -->
+                    <form class="col-12 col-xl-11 mx-auto px-0" *ngIf="currDiv == 'login'">
+                        <h2 class="pb-3 pb-lg-3 m-0 mb-lg-2 animate__animated animate__fadeInUp wow">
+
+                            {{'login_to_your_account' | translate}}
+                        </h2>
+                        <div class="from_inner">
+                            <div class="form-group select_box animate__animated animate__fadeInUp wow">
+                                <label>{{'select_cuntary' | translate}}</label>
+                                <div class="form-group-inner d-flex align-items-center">
+                                    <select class="form-select" id="inlineFormSelectPref">
+                                        <option selected disabled> <span>{{'select_cuntary' | translate}}</span></option>
+                                        <option value="1">Afghanistan</option>
+                                        <option value="2">Albania</option>
+                                        <option value="3">American Samoa</option>
+                                        <option value="4">Algeria</option>
+                                        <option value="5">American Samoa</option>
+                                        <option value="6">Andorra</option>
+                                        <option value="7">Bhutan</option>
+                                        <option value="8">Bolivia</option>
+                                        <option value="9">Botswana</option>
+                                        <option value="10">Cuba</option>
+                                        <option value="11">Curacao</option>
+                                        <option value="12">Cyprus</option>
+                                        <option value="13">Czech Republic</option>
+                                        <option value="14">Denmark</option>
+                                        <option value="15">Estonia</option>
+                                        <option value="16">Gabon</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group animate__animated animate__fadeInUp wow">
+                                <label>{{'phone_number' | translate}}</label>
+                                <div class="form-group-inner d-flex align-items-center">
+                                    <input type="number" class="form-control" placeholder="{{'enter_phone_number' | translate}}">
+                                </div>
+                            </div>
+
+                            <button class="btn rounded-pill mt-3 animate__animated animate__fadeInUp wow mt-5" (click)="ShowDiv('register')">
+                                {{'login' | translate}} 
+                            </button>
+                        </div>
+                    </form>
+
+                    <!--              Sign-in form end -->
+
+                    <!--              Sign-up form start -->
+                    <form class="col-12 col-xl-11 mx-auto px-0" *ngIf="currDiv == 'register'">
+                        <h2 class="pb-3 pb-lg-3 m-0   animate__animated animate__fadeInUp wow">
+                            <span class="material-symbols-outlined" (click)="ShowDiv('login')">arrow_back</span>&nbsp;&nbsp; {{'register_now' | translate}}
+                        </h2>
+                        <div class="from_inner">
+
+                            <div class="form-group animate__animated animate__fadeInUp wow">
+                                <label>{{'full_name' | translate}}</label>
+                                <div class="form-group-inner d-flex align-items-center">
+                                    <input type="name" class="form-control" placeholder="{{'enter_full_name' | translate}}">
+                                </div>
+                            </div>
+
+                            <div class="form-group animate__animated animate__fadeInUp wow">
+                                <label>{{'email_address' | translate}}</label>
+                                <div class="form-group-inner d-flex align-items-center">
+                                    <input type="email" class="form-control" placeholder="{{'enter_email_address' | translate}}">
+                                </div>
+                            </div>
+
+                            <div class="form-group select_box animate__animated animate__fadeInUp wow">
+                                <label>{{'select_cuntary' | translate}}</label>
+                                <div class="form-group-inner d-flex align-items-center">
+                                    <select class="form-select" id="inlineFormSelectPref">
+                                        <option selected disabled> <span>{{'select_cuntary' | translate}}</span></option>
+                                        <option value="1">Afghanistan</option>
+                                        <option value="2">Albania</option>
+                                        <option value="3">American Samoa</option>
+                                        <option value="4">Algeria</option>
+                                        <option value="5">American Samoa</option>
+                                        <option value="6">Andorra</option>
+                                        <option value="7">Bhutan</option>
+                                        <option value="8">Bolivia</option>
+                                        <option value="9">Botswana</option>
+                                        <option value="10">Cuba</option>
+                                        <option value="11">Curacao</option>
+                                        <option value="12">Cyprus</option>
+                                        <option value="13">Czech Republic</option>
+                                        <option value="14">Denmark</option>
+                                        <option value="15">Estonia</option>
+                                        <option value="16">Gabon</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group animate__animated animate__fadeInUp wow">
+                                <label>{{'phone_number' | translate}}</label>
+                                <div class="form-group-inner d-flex align-items-center">
+                                    <input type="number" class="form-control" placeholder="{{'enter_phone_number' | translate}}">
+                                </div>
+                            </div>
+                            <button class="btn rounded-pill animate__animated animate__fadeInUp wow mt-5" (click)="ShowDiv('verification')">
+                                {{'submit' | translate}} 
+                            </button>
+                        </div>
+                    </form>
+                    <!--              Sign-in form up -->
+
+
+                    <!--              Sign-in form start -->
+                    <form class="col-12 col-xl-11 mx-auto px-0" *ngIf="currDiv == 'verification'">
+                        <h2 class="pb-3 pb-lg-3 m-0 mb-lg-2 animate__animated animate__fadeInUp wow">
+                            <span class="material-symbols-outlined" (click)="ShowDiv('register')">arrow_back</span>&nbsp;&nbsp; {{'verification' | translate}}
+                        </h2>
+                        <div class="from_inner">
+
+                            <div class="form-group animate__animated animate__fadeInUp wow">
+                                <label>{{'otp_send_on_adove_number' | translate}}</label>
+                                <div class="form-group-inner d-flex align-items-center">
+                                    <input type="number" class="form-control" placeholder="{{'enter_otp' | translate}}">
+                                </div>
+                            </div>
+
+                            <button class="btn rounded-pill mt-5 animate__animated animate__fadeInUp wow" (click)="home()">
+                                    {{'submit' | translate}} 
+                            </button>
+                        </div>
+                    </form>
+
+                    <!--     Sign-in form end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

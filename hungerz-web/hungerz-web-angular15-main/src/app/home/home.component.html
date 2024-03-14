@@ -1,0 +1,301 @@
+<div class="body_wrapper">
+    <!-- Banner section start -->
+    <div class="banner">
+        <div class="mainBanner position-relative z-3 pt-5">
+            <div class="container position-relative z-3 pt-3">
+                <div class="row gap-0 align-items-end position-relative z-3">
+                    <div class="col-12 col-lg-6   pb-5 mb-3">
+                        <h1 class="h-font pb-5 text-center pt-5 pt-lg-0 text-lg-start an-1" innerHtml="{{'get_your_food_delivered' | translate}}"></h1>
+                        <form class="col-12 col-lg-10 px-0" role="search">
+                            <div class="form-group search_box mb-0">
+                                <div class="form-group-inner d-flex align-items-center mb-0">
+                                    <input type="search" class="form-control" placeholder="{{'search_food_restaurant' | translate}}">
+                                    <button class="btn" type="submit">
+                                        <i class="zmdi zmdi-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-12 col-lg-6 text-center" style="overflow: hidden">
+                        <img src="assets/images/sign_in_banner.png" class="img-fluid col-10">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Features section start -->
+
+
+        <!-- category section start -->
+        <div class="category">
+            <div class="container">
+                <div class="category-row p-4">
+                    <div class="row">
+                        <div class="col-6 col-md-3 col-md-2 col-lg text-center py-3 animate__animated animate__zoomIn wow" (click)="subCategory()">
+                            <img src="assets/images/category/ic_fastfood.png" class="img-fluid">
+                            <h3>Fast Food</h3>
+                        </div>
+                        <div class="col-6 col-md-3 col-md-2 col-lg text-center py-3 animate__animated animate__zoomIn wow" (click)="subCategory()">
+                            <img src="assets/images/category/ic_seafood.png" class="img-fluid">
+                            <h3>See Food</h3>
+                        </div>
+                        <div class="col-6 col-md-3 col-md-2 col-lg text-center py-3 animate__animated animate__zoomIn wow" (click)="subCategory()">
+                            <img src="assets/images/category/ic_chinese.png" class="img-fluid">
+                            <h3>Chinese</h3>
+                        </div>
+                        <div class="col-6 col-md-3 col-md-2 col-lg text-center py-3 animate__animated animate__zoomIn wow" (click)="subCategory()">
+                            <img src="assets/images/category/ic_dessert.png" class="img-fluid">
+                            <h3>Dessert</h3>
+                        </div>
+                        <div class="col-6 col-md-3 col-md-2 col-lg text-center py-3 animate__animated animate__zoomIn wow" (click)="subCategory()">
+                            <img src="assets/images/category/ic_beverages.png" class="img-fluid">
+                            <h3>Beverages</h3>
+                        </div>
+                        <div class="col-6 col-md-3 col-md-2 col-lg text-center py-3 animate__animated animate__zoomIn wow" (click)="subCategory()">
+                            <img src="assets/images/category/ic_fastfood.png" class="img-fluid">
+                            <h3>Fast Food</h3>
+                        </div>
+
+                        <div class="col-6 col-md-3 col-md-2 col-lg text-center py-3 animate__animated animate__zoomIn wow" (click)="subCategory()">
+                            <img src="assets/images/category/ic_seafood.png" class="img-fluid">
+                            <h3>See Food</h3>
+                        </div>
+                        <div class="col-6 col-md-3 col-md-2 col-lg text-center py-3 animate__animated animate__zoomIn wow" (click)="subCategory()">
+                            <img src="assets/images/category/ic_dessert.png" class="img-fluid">
+                            <h3>Dessert</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- category section end -->
+    </div>
+    <!-- Banner section end -->
+
+    <!-- Item section section start -->
+    <section class="vendorList themePadding">
+        <div class="sectionHeader">
+            <div class="container">
+                <h2 class="text-center text-lg-start">Nearby Food Restaurants</h2>
+            </div>
+        </div>
+
+        <div class="sectionContent">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-xl-4 animate__animated animate__zoomIn wow">
+                        <div class="media" (click)="vendorInfo()">
+                            <div class="img_box center_img">
+                                <img src="assets/images/vendor/6.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Food Junction</h2>
+                                <h3>Fast Food, Italian, Chinese</h3>
+                                <h4 class="d-flex align-items-center"><i class="zmdi zmdi-star"></i>4.2</h4>
+                                <h5 class="d-flex align-items-center">
+                                    <i class="zmdi zmdi-pin"></i> 2.4 km | City Food Park
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 animate__animated animate__zoomIn wow">
+                        <div class="media" (click)="vendorInfo()">
+                            <div class="img_box center_img">
+                                <img src="assets/images/vendor/7.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Hunger Spot</h2>
+                                <h3>Fast Food, Italian, Chinese</h3>
+                                <h4 class="d-flex align-items-center"><i class="zmdi zmdi-star"></i>4.3</h4>
+                                <h5 class="d-flex align-items-center">
+                                    <i class="zmdi zmdi-pin"></i> 1.8 km | City Food Park
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 animate__animated animate__zoomIn wow">
+                        <div class="media" (click)="vendorInfo()">
+                            <div class="img_box center_img">
+                                <img src="assets/images/vendor/8.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Food by Jesica</h2>
+                                <h3>Italian, Chinese</h3>
+                                <h4 class="d-flex align-items-center"><i class="zmdi zmdi-star"></i>4.3</h4>
+                                <h5 class="d-flex align-items-center">
+                                    <i class="zmdi zmdi-pin"></i> 1.2 km | City Food Park
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 animate__animated animate__zoomIn wow">
+                        <div class="media" (click)="vendorInfo()">
+                            <div class="img_box center_img">
+                                <img src="assets/images/vendor/9.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Fishchef</h2>
+                                <h3>See Food</h3>
+                                <h4 class="d-flex align-items-center"><i class="zmdi zmdi-star"></i>4.5</h4>
+                                <h5 class="d-flex align-items-center">
+                                    <i class="zmdi zmdi-pin"></i> 5.6 km | Fish Street
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 animate__animated animate__zoomIn wow">
+                        <div class="media" (click)="vendorInfo()">
+                            <div class="img_box center_img">
+                                <img src="assets/images/vendor/10.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Seven Start Restro</h2>
+                                <h3>Fast Food, Italian</h3>
+                                <h4 class="d-flex align-items-center"><i class="zmdi zmdi-star"></i>4.5</h4>
+                                <h5 class="d-flex align-items-center">
+                                    <i class="zmdi zmdi-pin"></i> 2.8 km | City Road
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 animate__animated animate__zoomIn wow">
+                        <div class="media" (click)="vendorInfo()">
+                            <div class="img_box center_img">
+                                <img src="assets/images/vendor/11.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Oprum Food Plaza</h2>
+                                <h3>Fast Food, Italian</h3>
+                                <h4 class="d-flex align-items-center"><i class="zmdi zmdi-star"></i>3.1</h4>
+                                <h5 class="d-flex align-items-center">
+                                    <i class="zmdi zmdi-pin"></i> 2.8 km | City Road
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Item section section end -->
+
+    <!-- Today Discount section section start -->
+    <app-today-discount class="animate__animated animate__fadeInUp wow text-center text-md-start"></app-today-discount>
+    <!-- Today Discount section section end -->
+
+
+    <!-- Item section section start -->
+    <section class="vendorList themePadding">
+        <div class="sectionHeader">
+            <div class="container">
+                <h2 class="text-center text-lg-start">Popular Restaurants</h2>
+            </div>
+        </div>
+
+        <div class="sectionContent">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-xl-4 animate__animated animate__zoomIn wow">
+                        <div class="media" (click)="vendorInfo()">
+                            <div class="img_box center_img">
+                                <img src="assets/images/vendor/6.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Food Junction</h2>
+                                <h3>Fast Food, Italian, Chinese</h3>
+                                <h4 class="d-flex align-items-center"><i class="zmdi zmdi-star"></i>4.2</h4>
+                                <h5 class="d-flex align-items-center">
+                                    <i class="zmdi zmdi-pin"></i> 2.4 km | City Food Park
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 animate__animated animate__zoomIn wow">
+                        <div class="media" (click)="vendorInfo()">
+                            <div class="img_box center_img">
+                                <img src="assets/images/vendor/7.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Hunger Spot</h2>
+                                <h3>Fast Food, Italian, Chinese</h3>
+                                <h4 class="d-flex align-items-center"><i class="zmdi zmdi-star"></i>4.3</h4>
+                                <h5 class="d-flex align-items-center">
+                                    <i class="zmdi zmdi-pin"></i> 1.8 km | City Food Park
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 animate__animated animate__zoomIn wow">
+                        <div class="media" (click)="vendorInfo()">
+                            <div class="img_box center_img">
+                                <img src="assets/images/vendor/8.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Food by Jesica</h2>
+                                <h3>Italian, Chinese</h3>
+                                <h4 class="d-flex align-items-center"><i class="zmdi zmdi-star"></i>4.3</h4>
+                                <h5 class="d-flex align-items-center">
+                                    <i class="zmdi zmdi-pin"></i> 1.2 km | City Food Park
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 animate__animated animate__zoomIn wow">
+                        <div class="media" (click)="vendorInfo()">
+                            <div class="img_box center_img">
+                                <img src="assets/images/vendor/9.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Fishchef</h2>
+                                <h3>See Food</h3>
+                                <h4 class="d-flex align-items-center"><i class="zmdi zmdi-star"></i>4.5</h4>
+                                <h5 class="d-flex align-items-center">
+                                    <i class="zmdi zmdi-pin"></i> 5.6 km | Fish Street
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 animate__animated animate__zoomIn wow">
+                        <div class="media" (click)="vendorInfo()">
+                            <div class="img_box center_img">
+                                <img src="assets/images/vendor/10.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Seven Start Restro</h2>
+                                <h3>Fast Food, Italian</h3>
+                                <h4 class="d-flex align-items-center"><i class="zmdi zmdi-star"></i>4.5</h4>
+                                <h5 class="d-flex align-items-center">
+                                    <i class="zmdi zmdi-pin"></i> 2.8 km | City Road
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 animate__animated animate__zoomIn wow">
+                        <div class="media" (click)="vendorInfo()">
+                            <div class="img_box center_img">
+                                <img src="assets/images/vendor/11.png" class="crop_img">
+                            </div>
+                            <div class="media-body">
+                                <h2>Oprum Food Plaza</h2>
+                                <h3>Fast Food, Italian</h3>
+                                <h4 class="d-flex align-items-center"><i class="zmdi zmdi-star"></i>3.1</h4>
+                                <h5 class="d-flex align-items-center">
+                                    <i class="zmdi zmdi-pin"></i> 2.8 km | City Road
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Item section section end -->
+
+    <!-- Download app section start -->
+    <app-download-our-app> </app-download-our-app>
+    <!-- Download app section end -->
+
+    <!--Footer start -->
+    <app-footer></app-footer>
+    <!--Footer end -->
+</div>
